@@ -21,21 +21,11 @@ pico_enable_stdio_uart(pico_wifi_example 0)
 pico_enable_stdio_usb(pico_wifi_example 1)
 
 # Add the standard include files to the build
-#target_include_directories(HTTPREQUESTS PRIVATE
-#  ${CMAKE_CURRENT_LIST_DIR}
-#)
-
 target_include_directories(pico_wifi_example PRIVATE
   ${CMAKE_CURRENT_LIST_DIR}
 )
 
 # Add any user requested libraries
-#target_link_libraries(HTTP_REQUESTS 
-#    pico_stdlib
-#    pico_cyw43_arch_lwip_poll
-#    pico_lwip_http
-#)
-
 target_link_libraries(pico_wifi_example
     http_requests
     pico_stdlib
